@@ -29,7 +29,7 @@ interface AppContextProps {
 const AppProvider = ({children}: AppProviderProps) => {
   const [author, setAuthor] = useState<Author[] | undefined>(data);
   const [books, setBooks] = useState<Book[] | undefined>(booksData);
-
+  // sort Author AuthorScreen
   const sortingAuthorHandler = (sort: string) => {
     const sortAuthor = [...author];
     if (sort === 'по имени') {
@@ -54,7 +54,7 @@ const AppProvider = ({children}: AppProviderProps) => {
       setAuthor([...sorted]);
     }
   };
-
+  // sort Books BooksScreen
   const sortingBookHandler = (sort: string) => {
     const sortAuthor = [...books];
     if (sort === 'по названию') {

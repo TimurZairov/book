@@ -22,7 +22,7 @@ const AuthorScreen = () => {
   const [middleName, setMiddleName] = useState('');
   const [birthDate, setBirthDate] = useState('');
 
-  const {author, setAuthor, sortingHandler} = useContext(AppContext);
+  const {author, setAuthor, sortingAuthorHandler} = useContext(AppContext);
 
   // submit author
   const submitHandler = () => {
@@ -34,6 +34,7 @@ const AuthorScreen = () => {
     ) {
       return;
     } else {
+      //id может выдать одинаковый сделано для теста
       let id = Math.floor(Math.random() * 20 + 1);
       const newAuthor = {
         id,
@@ -44,10 +45,14 @@ const AuthorScreen = () => {
       };
       setAuthor(prevState => [newAuthor, ...prevState]);
     }
+    setFirstName('');
+    setLastName('');
+    setMiddleName('');
+    setBirthDate('');
   };
   //sort By
   const sortHandler = (sortBy: string) => {
-    sortingHandler(sortBy);
+    sortingAuthorHandler(sortBy);
   };
 
   return (
@@ -57,10 +62,26 @@ const AuthorScreen = () => {
           {/* Inputs */}
           <View style={styles.data}>
             <Text>Введите данные Автора</Text>
-            <Input placeholder="Имя" setAuthorData={setFirstName} />
-            <Input placeholder="Фамилия" setAuthorData={setLastName} />
-            <Input placeholder="Отчество" setAuthorData={setMiddleName} />
-            <Input placeholder="Дата рождения" setAuthorData={setBirthDate} />
+            <Input
+              value={firstName}
+              placeholder="Имя"
+              setAuthorData={setFirstName}
+            />
+            <Input
+              value={lastName}
+              placeholder="Фамилия"
+              setAuthorData={setLastName}
+            />
+            <Input
+              value={middleName}
+              placeholder="Отчество"
+              setAuthorData={setMiddleName}
+            />
+            <Input
+              value={birthDate}
+              placeholder="Дата рождения"
+              setAuthorData={setBirthDate}
+            />
           </View>
           {/* Button component */}
           <Button onPress={submitHandler}>Добавить</Button>

@@ -38,6 +38,7 @@ const BooksScreen = () => {
     ) {
       return;
     } else {
+      //id может выдать одинаковый сделано для теста
       let id = Math.floor(Math.random() * 20 + 1);
       const newBook: Book = {
         id,
