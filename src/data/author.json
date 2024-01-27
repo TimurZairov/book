@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "lastName": "Иванов",
+    "firstName": "Иван",
+    "middleName": "Иванович",
+    "birthDate": "1990-01-15"
+  },
+  {
+    "id": 2,
+    "lastName": "Петров",
+    "firstName": "Петр",
+    "middleName": "Петрович",
+    "birthDate": "1985-05-20"
+  },
+  {
+    "id": 3,
+    "lastName": "Сидорова",
+    "firstName": "Анна",
+    "middleName": "Владимировна",
+    "birthDate": "1995-11-08"
+  },
+  {
+    "id": 4,
+    "lastName": "Козлов",
+    "firstName": "Александр",
+    "middleName": "Сергеевич",
+    "birthDate": "1982-09-03"
+  }
+]
