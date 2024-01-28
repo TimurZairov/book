@@ -5,6 +5,11 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
 
 ## Step 1: Start the Metro Server
+После клонирвания, усановит все зависимости, прокт собирался на ios симудяторе, 
+react navtive navigation не подключен к android симулятору
+
+# ios
+cd ios && pod install 
 
 First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
 
